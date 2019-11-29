@@ -27,53 +27,54 @@ text = addA(text,length) #aaaaa aaaaa a
 f = open("List2.txt", "w+")
 
 f.write(text+"\n")
+for s in range(26):
 
-for r in range(26):
+    for r in range(26):
 
-    for q in range(26):
+        for q in range(26):
 
-        for p in range(26):
+            for p in range(26):
 
-            for o in range(26):
+                for o in range(26):
 
-                for n in range(26):
+                    for n in range(26):
 
-                    for m in range(26):
+                        for m in range(26):
 
-                        for l in range(26):
+                            for l in range(26):
 
-                            for k in range(26):
+                                for k in range(26):
 
-                                for j in range(26):
+                                    for j in range(26):
 
-                                    for i in range(26):                         #Start editing the last character
-                                        newChar = text[10:]
-                                        text = text[:10] + dictionary[newChar]
+                                        for i in range(26):                         #Start editing the last character
+                                            newChar = text[10:]
+                                            text = text[:10] + dictionary[newChar]
+                                            f.write(text+"\n")
+
+                                        newChar = text[9:10]                        #Then work your way back in the nested for loop
+                                        text = text[:9] + dictionary[newChar] + "a"
                                         f.write(text+"\n")
 
-                                    newChar = text[9:10]                        #Then work your way back in the nested for loop
-                                    text = text[:9] + dictionary[newChar] + "a"
+                                    newChar = text[8:9]
+                                    text = text[:8] + dictionary[newChar] + "aa"
                                     f.write(text+"\n")
 
-                                newChar = text[8:9]
-                                text = text[:8] + dictionary[newChar] + "aa"
+                                newChar = text[7:8]
+                                text = text[:7] + dictionary[newChar] + "aaa"
                                 f.write(text+"\n")
 
-                            newChar = text[7:8]
-                            text = text[:7] + dictionary[newChar] + "aaa"
+                            newChar = text[6:7]
+                            text = text[:6] +dictionary[newChar] + "aaaa"
                             f.write(text+"\n")
 
-                        newChar = text[6:7]
-                        text = text[:6] +dictionary[newChar] + "aaaa"
-                        f.write(text+"\n")
+                        newChar = text[5:6]
+                        text = text[:5] + dictionary[newChar] + "aaaaa"
+                        f.write(text + "\n")
 
-                    newChar = text[5:6]
-                    text = text[:5] + dictionary[newChar] + "aaaaa"
+                    newChar = text[4:5]
+                    text = text[:4] + dictionary[newChar] + "aaaaaa"
                     f.write(text + "\n")
-
-                newChar = text[4:5]
-                text = text[:4] + dictionary[newChar] + "aaaaaa"
-                f.write(text + "\n")
 
                 newChar = text[3:4]
                 text = text[:3] + dictionary[newChar] + "aaaaaaa"
@@ -88,7 +89,8 @@ for r in range(26):
         f.write(text + "\n")
 
     newChar = text[:1]
-    text = + dictionary[newChar] + "aaaaaaaaaa"
+    text = dictionary[newChar] + "aaaaaaaaaa"
     f.write(text + "\n")
 
 print("DONE FAM")
+
